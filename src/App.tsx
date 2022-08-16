@@ -1,11 +1,12 @@
 import React from "react";
+import { MainPage } from "./Pages/MainPage";
 
-interface Iprops {
-  test: string;
+function App() {
+  return (
+    <div className="App">
+      <MainPage />
+    </div>
+  );
 }
-
-const App: React.FunctionComponent<Iprops> = ({ test }) => {
-  return <div className="App" />;
-};
 
 export default App;
