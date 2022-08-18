@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface ProductListProps {
+interface Props {
   currentId: number;
   setCurrentId: any;
   product: {
@@ -12,11 +12,11 @@ interface ProductListProps {
   };
 }
 
-function ProductList({ currentId, setCurrentId, product }: ProductListProps) {
+function ProductList({ currentId, setCurrentId, product }: Props) {
   return (
     <>
       <ProductListContainer>
-        {product.productList.map((product: any) => (
+        {product.productList.map((product) => (
           <ProductDiv key={product.productId}>
             <ProductBox
               src={product.imageUrl}
