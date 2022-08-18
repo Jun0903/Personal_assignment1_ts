@@ -19,7 +19,7 @@ function Main() {
         "https://cdn.ggumim.co.kr/test/image_product_link.json"
       );
       setPruduct(response.data);
-    } catch (e) {
+    } catch (e: unknown) {
       setError(e);
     }
     setLoading(false);
