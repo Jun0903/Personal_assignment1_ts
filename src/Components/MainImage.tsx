@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 interface Props {
   currentId: number;
-  setCurrentId: any;
   product: { id: number; imageUrl: string; productList: any };
+  setCurrentId: any;
 }
 
 //currentId 라는 상태값 생성 후 API 받은 정보들과 비교 연산자로 처리
-function MainImage({ currentId, setCurrentId, product }: Props) {
+export default function MainImage({ currentId, setCurrentId, product }: Props) {
   return (
     <>
       <ImageContainer onClick={() => setCurrentId(0)}>
@@ -64,8 +64,6 @@ function MainImage({ currentId, setCurrentId, product }: Props) {
     </>
   );
 }
-
-export default MainImage;
 
 const ImageContainer = styled.div`
   display: inline-block;
